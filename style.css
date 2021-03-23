@@ -1,0 +1,42 @@
+body {
+  font-family: 'Kanit', sans-serif;
+  color: #f3f4ed;
+  background-image: url(https://image.winudf.com/v2/image/Y29tLkVtcGlyZVdhbGxwYXBlcnMuTW9zY293MDdfc2NyZWVuc2hvdHNfMF84ZTg1NjBiNA/screen-0.jpg?fakeurl=1&type=.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.container{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#content{
+  max-width:650px;
+  height:auto;
+}
+
+
+header {
+  font-weight: 800;
+  text-align: center;
+  padding: 0 0.625rem;
+  margin-top: 3rem;
+    margin-bottom: 1.875rem;
+}
+
+#description{
+  text-align: center;
+  font-weight: 800;
+}
+
+main {
+  background-color: hsla(355, 74%, 55%, 0.6);
+  padding: 15px 40px;
+    border-radius: 5px;
+/* agrega difuminacion a la caja main */
+    box-shadow: #333 3px 3px 20px 4px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Formulario</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <!-- fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="content" class="container">
+    <header class="header">
+      <h1 id="title">
+        ¿Quieres estudiar en Rusia?
+      </h1>
+    </header>
+
+
+    <main>
+      <p id="description">
+        Ayudanos a encontrar la opción que más se adapte a ti, respondiendo este simple formulario. </p>
+
+      <form id="survey-form">
+
+
+
+
+        <div class="form-group">
+          <input type="text" id="name" class="form-control" placeholder="Nombre" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="lName" class="form-control" placeholder="Apellido" required>
+        </div>
+
+
+
+        <div class="form-group">
+          <input class="form-control" type="email" id="email" aria-describedby="ayudaEmail" placeholder="Ingresa tu correo electronico" required>
+          <small id="ayudaEmail" class="form-text tex-muted"> No compartiremos tu tu información con nadie.</small>
+        </div>
+
+
+        <div class="form-group">
+          <label id="number-label" for="age"> Edad: <span id="demo"></span> </label>
+          <input class="form-control-range slider" type="range" name="age" id="age" min="15" max="50" value="18" required>
+
+        </div>
+
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label"> ¿Que grado academico te gustaria cursar en Rusia?</legend>
+
+            <div class="col-sm-10">
+
+
+              <div class="form-check">
+
+                <input class="form-check-input" name="grado" type="radio" id="grado1" value="doctorado" checked>
+                <label for="grado1" class="form-check-label">Doctorado</label>
+              </div>
+
+              <div class="form-check">
+
+                <input class="form-check-input" name="grado" type="radio" id="grado2" value="maestria" checked>
+                <label for="grado2" class="form-check-label">Maestria</label>
+              </div>
+
+              <div class="form-check">
+
+                <input class="form-check-input" name="grado" type="radio" id="grado3" value="bachiller" checked>
+                <label for="grado3" class="form-check-label">Bachiller</label>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        </fieldset>
+
+
+
+    <label class="my-1 mr-2" for="carrera">Elige una carrera</label>
+    <select class="custom-select my-1 mr-sm-2" id="carrera" required>
+      <option disabled selected value>....</option>
+      <option value="ing">Ingeniería</option>
+      <option value="arq">Arquitectura</option>
+      <option value="bio">Biología</option>
+    </select>
+
+
+
+
+
+
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label">¿En que ciudad te gustaria vivir?</legend>
+
+            <div class="col-md-4">
+
+
+              <div class="form-check">
+
+                <input class="form-check-input" type="checkbox" id="moscu" value="">
+                <label for="moscu" class="form-check-label">Moscú</label>
+              </div>
+
+              <div class="form-check">
+
+                <input class="form-check-input" type="checkbox" id="eka" value="">
+                <label for="eka" class="form-check-label">Ekaterinburgo</label>
+              </div>
+
+              <div class="form-check">
+
+                <input class="form-check-input" type="checkbox" id="sp" value="">
+                <label for="sp" class="form-check-label">San Petersburgo</label>
+              </div>
+</fieldset>
+
+
+
+
+
+
+
+  <label class="my-1 mr-2" for="presupuesto">Elige un presupuesto anual <span style="font-size:15px">(en Rublos)</span></label>
+  <select class="custom-select my-1 mr-sm-2" id="presupuesto" required>
+    <option disabled selected value>....</option>
+    <option value="1">100000 - 200000</option>
+    <option value="2">200000-300000</option>
+    <option value="3">300000-400000</option>
+
+  </select>
+
+
+
+
+              <div class="form-group">
+                <label for="textarea">Cuentanos más detalladamente sobre ti y tus objetivos en Rusia.</label>
+
+                <textarea class="form-control" id="textarea" rows="3" placeholder="Danos más detalles" required> </textarea>
+
+              </div>
+
+              <button class="btn btn-primary" id="submit" type="submit">Enviar formulario</button>
+
+
+
+      </form>
+    </main>
+
+  </div>
+
+
+
+  <script>
+    var slider = document.getElementById("age");
+    var output = document.getElementById("demo");
+
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+  </script>
+
+</body>
+
+</html>
